@@ -14,7 +14,7 @@ function execute() {
 
 	input
 
-	RESULT = $(java ./classes/Main $range $size)
+	RESULT = $(java ./classes/app.Main $sort $range $size)
 
 	if [[ $RESULT == "数値ではありません。" ]]; then
 		input
@@ -22,6 +22,10 @@ function execute() {
 }
 
 function input() {
+	echo Shaker : 0
+
+	read sort:
+
 	echo Range :
 	read range
 
