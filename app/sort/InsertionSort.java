@@ -21,11 +21,11 @@ public class InsertionSort implements Sort {
 
 		switch ( this.upORdown ) {
 			case UP:
-				tmp = upSort(source);
+				tmp = null; //upSort(source);
 				break;
 
 			case DOWN:
-				tmp = downSort(source);
+				tmp = null; //downSort(source);
 				break;
 		}
 		return tmp;

@@ -10,9 +10,9 @@ javac  -d ./.classes ./app/Main.java
 input() {
 	echo Sort type...
 	echo Shaker    : 0
-	echo Bubble    : 1 \(anavailable\)
-	echo Quick     : 2 \(anavailable\)
-	echo Insertion : 3 \(anavailable\)
+	echo Bubble    : 1 \(Unavailable\)
+	echo Quick     : 2 \(Unavailable\)
+	echo Insertion : 3 \(Unavailable\)
 
 	read sort
 
