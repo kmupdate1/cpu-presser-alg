@@ -1,14 +1,12 @@
 package app.sort;
 
-import app.NotNumberException;
-
 public class ShakerSort implements Sort {
 	private static final int UP = 0;
 	private static final int DOWN = 1;
 
 	private Integer upORdown;
 
-	public ShakerSort(String upORdown) throws NotNumberException {
+	public ShakerSort(String upORdown) throws NumberFormatException {
 		this.upORdown = Integer.parseInt(upORdown);
 	}
 

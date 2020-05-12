@@ -19,12 +19,12 @@ class SortEntry {
 	// Instance properties.
 	private Sort sort;
 
-	void start(String rangeInput, String sizeInput) throws NotNumberException {
+	void start(String rangeInput, String sizeInput) throws NumberFormatException {
 
-		System.out.println("***** ソートを開始します. *****");
 		Integer range = Integer.parseInt(rangeInput);
 		Integer size  = Integer.parseInt(sizeInput);
 
+		System.out.println("***** ソートを開始します. *****");
 		Integer[] result = createResource(range, size);
 
 		for (int i = 0; i < result.length; i++) {

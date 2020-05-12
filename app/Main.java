@@ -23,11 +23,12 @@ public class Main {
 					break;
 
 				default:
+					System.out.println("'0 ~ 3'を入力してください．");
 			}
-		} catch (NotNumberException e) {
-			System.out.println("数値ではありません。");
+		} catch (NumberFormatException e) {
+			System.out.println("数値を入力してください．");
 		} catch (ArrayIndexOutOfBoundsException e) {
-			System.out.println("入力が不十分です。");
+			System.out.println("入力が不正です．");
 		}
 	}
 }

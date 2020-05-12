@@ -1,9 +1,15 @@
 #!/bin/sh
 
-rm ./.classes/app/sort/*.class
-rmdir ./.classes/app/sort
-rm ./.classes/app/*.class
-rmdir ./.classes/app
+if test -e .classes; then
+	rm ./.classes/app/sort/*.class
+	rmdir ./.classes/app/sort
+	rm ./.classes/app/*.class
+	rmdir ./.classes/app
+fi
+
+if test -e Result.txt; then
+	rm Result.txt
+fi
 
 javac  -d ./.classes ./app/Main.java
 
@@ -32,13 +38,8 @@ execute() {
 	input
 
 	cd ./.classes
-	java app.Main $sort $upORdown $range $size
-	cd ..
+	java app.Main $sort $upORdown $range $size >> ../Result.txt
+	cat ../Result.txt
 }
 
 execute
-
-#rm ./.classes/app/*.class
-#rmdir ./.classes/app
-#rm ./.classes/app/sort/*.class
-#rmdir ./.classes/app/sort

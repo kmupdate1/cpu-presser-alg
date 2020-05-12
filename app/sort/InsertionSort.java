@@ -1,7 +1,5 @@
 package app.sort;
 
-import app.NotNumberException;
-
 /**
 * Strategy area has not already modified.
 */
@@ -11,7 +9,7 @@ public class InsertionSort implements Sort {
 
 	private Integer upORdown;
 
-	public InsertionSort(String upORdown) throws NotNumberException {
+	public InsertionSort(String upORdown) throws NumberFormatException {
 		this.upORdown = Integer.parseInt(upORdown);
 	}
 
