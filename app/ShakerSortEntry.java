@@ -21,12 +21,19 @@ class ShakerSortEntry {
 
 	void start(String rangeInput, String sizeInput) throws NotIntException {
 
-		System.out.println("Hello World.");
+		System.out.println("***** ソートを開始します. *****");
 		Integer range = Integer.parseInt(rangeInput);
 		Integer size  = Integer.parseInt(sizeInput);
 
-		System.out.println(createResource(range, size));
+		Integer[] result = createResource(range, size);
 
+		for (int i = 0; i < result.length; i++) {
+			if ( i == result.length - 1 ) {
+				System.out.println(result[i]);				
+			} else {
+				System.out.print(result[i] + ", ");
+			}
+		}
 	}
 
 	private Integer[] createResource(Integer range, Integer size) {
@@ -37,6 +44,6 @@ class ShakerSortEntry {
 			source[i] = rd.nextInt(range);
 		}
 
-		Integer[] result = sort.start(source);
+		return sort.start(source);
 	}
 }
