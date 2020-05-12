@@ -10,13 +10,14 @@ javac  -d ./.classes ./app/Main.java
 input() {
 	echo Sort type...
 	echo Shaker    : 0
-	echo Bubble    : 1
-	echo Quick     : 2
-	echo Insertion : 3
+	echo Bubble    : 1 \(anavailable\)
+	echo Quick     : 2 \(anavailable\)
+	echo Insertion : 3 \(anavailable\)
 
 	read sort
 
-	echo UP -\> 0 or DOWN -\> 1 :
+	echo UP -\> 0
+	echo DOWN -\> 1 :
 	read upORdown
 
 	echo Max Range :
