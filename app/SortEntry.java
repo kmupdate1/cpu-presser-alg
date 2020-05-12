@@ -4,14 +4,14 @@ import app.sort.Sort;
 
 import java.util.Random;
 
-class ShakerSortEntry {
+class SortEntry {
 
 	// Initialize singleton instance.
-	private static ShakerSortEntry entry = new ShakerSortEntry();
-	private ShakerSortEntry() {}
+	private static SortEntry entry = new SortEntry();
+	private SortEntry() {}
 
 	// Get singleton instance.
-	static ShakerSortEntry getInstance(Sort sort) {
+	static SortEntry getInstance(Sort sort) {
 		entry.sort = sort;
 		return entry;
 	}
@@ -19,7 +19,7 @@ class ShakerSortEntry {
 	// Instance properties.
 	private Sort sort;
 
-	void start(String rangeInput, String sizeInput) throws NotIntException {
+	void start(String rangeInput, String sizeInput) throws NotNumberException {
 
 		System.out.println("***** ソートを開始します. *****");
 		Integer range = Integer.parseInt(rangeInput);

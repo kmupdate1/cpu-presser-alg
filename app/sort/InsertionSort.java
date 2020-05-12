@@ -2,13 +2,16 @@ package app.sort;
 
 import app.NotNumberException;
 
-public class ShakerSort implements Sort {
+/**
+* Strategy area has not already modified.
+*/
+public class InsertionSort implements Sort {
 	private static final int UP = 0;
 	private static final int DOWN = 1;
 
 	private Integer upORdown;
 
-	public ShakerSort(String upORdown) throws NotNumberException {
+	public InsertionSort(String upORdown) throws NotNumberException {
 		this.upORdown = Integer.parseInt(upORdown);
 	}
 
@@ -81,26 +84,3 @@ public class ShakerSort implements Sort {
 	}
 
 }
-
-		/*
-		int size_1 = source.length - 1;
-
-		for (int i = 0; i < source.length / 2; i++) {
-			for (j = j; j < k; j++) {
-				if ( source[j] > source[j + 1]) {
-					int tmp;
-					tmp = source[j];
-					source[j] = source[j + 1];
-					source[j + 1] = source[j];
-				}
-			}
-			for (k = k; k < j - 1; k--) {
-				if ( source[k + 1] < source[k] ) {
-					int tmp;
-					tmp = source[k + 1];
-					source[k + 1] = source[k];
-					source[k] = tmp;
-				}
-			}
-		}
-		*/
