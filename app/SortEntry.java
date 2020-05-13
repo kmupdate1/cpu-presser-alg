@@ -24,7 +24,6 @@ class SortEntry {
 		Integer range = Integer.parseInt(rangeInput);
 		Integer size  = Integer.parseInt(sizeInput);
 
-		System.out.println("***** ソートを開始します. *****");
 		Integer[] result = createResource(range, size);
 
 		for (int i = 0; i < result.length; i++) {

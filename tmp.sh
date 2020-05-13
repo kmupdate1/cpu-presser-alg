@@ -38,8 +38,11 @@ execute() {
 	input
 
 	cd ./.classes
+	
+	echo "***** ソートを開始します. *****"
 	java app.Main $sort $upORdown $range $size >> ../Result.txt
-	cat ../Result.txt
+	
+	echo 実行結果を'Result.txt'に保存しました．
 }
 
 execute
